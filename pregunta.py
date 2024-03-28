@@ -13,13 +13,13 @@ import pandas as pd
 import re
 
 
-def ingest_data(input_file):
+def ingest_data():
 
     #
     # Inserte su código aquí
     #
     
-    with open(input_file, 'r') as text_file:
+    with open('clusters_report.txt', 'r') as text_file:
         df = text_file.readlines()  
     
     cls = []
@@ -50,4 +50,3 @@ def ingest_data(input_file):
     
     return pd.DataFrame (cls, columns = ['cluster', 'cantidad_de_palabras_clave', 'porcentaje_de_palabras_clave', 'principales_palabras_clave'])
 
-print(ingest_data('clusters_report.txt'))
