@@ -20,7 +20,9 @@ def ingest_data():
     #
     
     with open('clusters_report.txt', 'r') as text_file:
-        df = text_file.readlines()  
+        df = text_file.readlines()
+        df = df[4:]
+       
     
     cls = []
     
